@@ -87,7 +87,7 @@ const About = () => {
             I’m a motivated software developer with a strong interest in frontend engineering, UI/UX, and building clean, scalable web applications. I enjoy transforming ideas into real, interactive experiences using modern technologies. My goal is to keep learning, improving, and contributing to impactful projects.
           </p>
           <p className='mt-4 text-gray-400 text-base sm:text-lg'>
-            I’m a dedicated software developer with a strong interest in frontend technologies.
+            I’m a dedicated software developer with a strong interest in frontend technologies, always pushing myself to learn, improve, and craft user-centric products that make an impact.
           </p>
         </motion.div>
       
