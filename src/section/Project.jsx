@@ -56,7 +56,7 @@ const Project = () => {
   const activeProject = projects[activeIndex];
 
   return (
-    <section 
+    <section id="projects"
     ref={sceneRef} 
     className='relative text-white'
     style={{

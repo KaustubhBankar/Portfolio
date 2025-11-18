@@ -1,5 +1,4 @@
 
-import React from 'react'
 import { motion } from "framer-motion"
 import Profile from "../assets/image.jpg"
 
@@ -18,7 +17,7 @@ const About = () => {
   ]
 
   return (
-    <section className='min-h-screen w-full flex items-center justify-center relative bg-black text-white overflow-hidden'>
+    <section id="about" className='min-h-screen w-full flex items-center justify-center relative bg-black text-white overflow-hidden'>
       <div className='absolute inset-0 pointer-events-none'>
         {glows.map((c, i) => (
           <div key={i} className={`absolute rounded-full  bg-gradient-to-r from-[#8e2de2] to-[#ff6bcb] animate-pulse ${c}`} />
@@ -48,7 +47,7 @@ const About = () => {
               Full Stack Developer
             </p>
             <p className='mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae officia cum, hic impedit mollitia voluptates iusto earum eum quidem fugiat accusamus quasi, voluptatibus maxime? Minus qui aperiam perferendis nam quam.
+              Hi! I’m a developer who loves creating cool and functional websites. I enjoy exploring new technologies, improving my skills, and building projects that solve real problems. I believe in writing clean code, learning constantly, and having fun while doing it.
             </p>
 
             <div className='mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl'>
@@ -85,10 +84,10 @@ const About = () => {
             About Me
           </h3>
           <p className='text-gray-300 leading-relaxed text-base sm:text-lg'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, consequatur rerum illum veritatis mollitia ratione ipsa eum saepe perspiciatis molestias?
+            I’m a motivated software developer with a strong interest in frontend engineering, UI/UX, and building clean, scalable web applications. I enjoy transforming ideas into real, interactive experiences using modern technologies. My goal is to keep learning, improving, and contributing to impactful projects.
           </p>
           <p className='mt-4 text-gray-400 text-base sm:text-lg'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vitae quidem ipsam!
+            I’m a dedicated software developer with a strong interest in frontend technologies.
           </p>
         </motion.div>
       

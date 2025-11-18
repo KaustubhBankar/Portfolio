@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import ParticleBackground from '../components/ParticleBackground'
 import { motion } from "framer-motion"
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6'
-import avator from "../assets/avator.png"
+import astro2 from "../assets/astro2.png"
 
 const socials = [
   { Icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/kaustubh_bankar" },
@@ -11,13 +11,13 @@ const socials = [
 ]
 
 const glowVariants = {
-  initial: {scale:1, y:0, filter: "drop-shadow(0 0 0 rgba(0, 0, 0, 0))"},
+  initial: { scale: 1, y: 0, filter: "drop-shadow(0 0 0 rgba(0, 0, 0, 0))" },
   hover: {
-    scale: 1.2, y:-3, 
+    scale: 1.2, y: -3,
     filter: "drop-shadow(0 0 8px rgba(13, 88, 204, 0.9)) drop-shadow(0 0 18px rgba(16, 185, 129, 0.8))",
-    transition: {type: "spring", stiffness: 300, damping: 15}
+    transition: { type: "spring", stiffness: 300, damping: 15 }
   },
-  tap: {scale: 0.95, y:0, transition: {duration: 0.08}}
+  tap: { scale: 0.95, y: 0, transition: { duration: 0.08 } }
 }
 
 const Home = () => {
@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </div>
       <div className='relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2'>
-        <div className='flex flex-col justify-center h-full text-center lg:text-left relative'>
+        <div className='flex flex-col justify-center h-full text-center lg:text-left relative  z-20'>
           <div className='w-full lg:pr-24 mx-auto max-w-[48rem]'>
             <motion.div
               className='mb-3 text-xl sm:text-2xl md:text-3xl font-semibold lg:text-4xl text-white tracking-wide min-h-[1.6em]'
@@ -72,14 +72,14 @@ const Home = () => {
               transition={{ duration: 1 }}
             >
               Hello, I'm <br />
-              <span className='text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold lg:whitespace-nowrap'>Kaustubh Bankar</span>
+              <span className='text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold lg:whitespace-nowrap relative z-20'>Kaustubh Bankar</span>
             </motion.h1>
             <motion.p className='mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0'
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem commodi vero tempora recusandae doloribus repellat. Debitis, perspiciatis veritatis consequuntur expedita deleniti corrupti ex!
+              I build clean, fast, and user-focused digital experiences. I enjoy solving problems, creating intuitive UIs, and turning ideas into polished, production-ready solutions.
             </motion.p>
 
             <motion.div className='mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6 '
@@ -95,21 +95,21 @@ const Home = () => {
             </motion.div>
 
             <div className='mt-10 flex gap-5 text-2xl md:text-3xl justify-center lg:justify-start'>
-              {socials.map(({Icon, label, href})=> (
-              <motion.a 
-              href={href}
-              key={label}
-              target='_blank'
-              aria-label={label}
-              rel='noopener noreferrer'
-              variants={glowVariants}
-              initial="initial"
-              whileHover="hover"
-              whileTap="tap"
-              className='text-gray-300'
-              >
-                <Icon />
-              </motion.a>
+              {socials.map(({ Icon, label, href }) => (
+                <motion.a
+                  href={href}
+                  key={label}
+                  target='_blank'
+                  aria-label={label}
+                  rel='noopener noreferrer'
+                  variants={glowVariants}
+                  initial="initial"
+                  whileHover="hover"
+                  whileTap="tap"
+                  className='text-gray-300'
+                >
+                  <Icon />
+                </motion.a>
               ))}
             </div>
 
@@ -119,25 +119,35 @@ const Home = () => {
 
         <div className='relative hidden lg:block'>
           <div className='absolute top-1/2 -translate-y-1/2 pointer-events-none'
-          style={{
-            right: "10px", 
-            width: "min(22vh, 410px)", 
-            height: "min(40vh, 760px)", 
-            borderRadius: "50%", 
-            filter: "blur(38px)",
-            opacity: 0.32,
-            background: "conic-gradient(from 0deg, #1cd8d2, #00bf8f, #302b63, #1cd8d2)"
-          }}
+            style={{
+              right: "10px",
+              width: "min(22vh, 410px)",
+              height: "min(40vh, 760px)",
+              borderRadius: "50%",
+              filter: "blur(38px)",
+              opacity: 0.32,
+              background: "conic-gradient(from 0deg, #1cd8d2, #00bf8f, #302b63, #1cd8d2)"
+            }}
           />
           <motion.img
-          src={avator} alt="Avator" 
-          className='absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none'
-          style={{
-            right: "-30px", width: "min(45vw, 780px)", maxHeight: "90vh"
-          }}
-          initial = {{opacity:0, y: 40, scale: 0.98}}
-          animate = {{opacity:1, y: 0, scale: 1}}
-          transition={{delay: 0.2, duration:0.8}}
+            src={astro2} alt="Avator"
+            className='absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none z-10'
+            style={{
+              right: "-30px", width: "min(45vw, 780px)", maxHeight: "90vh",
+             opacity: 0.8,
+              filter: `
+      blur(0.3px) 
+      drop-shadow(0 0 120px rgba(255,255,255,0.15)) 
+      brightness(0.9)
+      contrast(1.05)
+    `,
+     maskImage: "radial-gradient(circle at center, white 55%, transparent 90%)",
+    WebkitMaskImage: "radial-gradient(circle at center, white 55%, transparent 90%)",
+    zIndex: 5
+            }}
+            initial={{ opacity: 0, y: 40, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
           />
         </div>
 
